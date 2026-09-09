@@ -1,9 +1,12 @@
 name: Update Contributions
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "0 0 * * *"
-  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   update:
@@ -29,5 +32,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/contributions.json
-          git commit -m "Update contributions" || echo "No changes"
+          git diff --cached --quiet || git commit -m "Update contributions"
           git push
