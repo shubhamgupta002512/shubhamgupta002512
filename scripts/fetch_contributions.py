@@ -22,7 +22,7 @@ soup = BeautifulSoup(response.text, "html.parser")
 
 contributions = []
 
-for rect in soup.select("rect[data-date]"):
+for rect in soup.select("td[data-date]"):
     contribution_date = rect.get("data-date")
     level = rect.get("data-level", "0")
 
