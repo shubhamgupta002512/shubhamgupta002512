@@ -1,4 +1,3 @@
-
 import requests
 from bs4 import BeautifulSoup
 import json
@@ -22,7 +21,7 @@ soup = BeautifulSoup(response.text, "html.parser")
 
 contributions = []
 
-for rect in soup.select("td[data-date]"):
+for rect in soup.select("rect[data-date]"):
     contribution_date = rect.get("data-date")
     level = rect.get("data-level", "0")
 
