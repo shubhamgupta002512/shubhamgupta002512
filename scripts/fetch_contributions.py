@@ -1,45 +1,21 @@
 import requests
-from bs4 import BeautifulSoup
 import json
-from datetime import date, timedelta
 
 USERNAME = "shubhamgupta002512"
 
-today = date.today()
-start = today - timedelta(days=364)
+url = f"https://github-contributions-api.jogruber.de/v4/{USERNAME}"
 
-url = f"https://github.com/users/{USERNAME}/contributions?from={start}&to={today}"
-
-headers = {
-    "User-Agent": "Mozilla/5.0"
-}
-
-response = requests.get(url, headers=headers)
+response = requests.get(url)
 response.raise_for_status()
 
-soup = BeautifulSoup(response.text, "html.parser")
+github_data = response.json()
 
 contributions = []
 
-for element in soup.select("[data-date]"):
-    contribution_date = element.get("data-date")
-
-    level = element.get("data-level")
-
-    if level is None:
-        classes = element.get("class", [])
-        level = 0
-
-        for cls in classes:
-            if cls.startswith("ContributionCalendar-day--"):
-                try:
-                    level = int(cls.split("--")[-1])
-                except ValueError:
-                    level = 0
-
+for item in github_data["contributions"]:
     contributions.append({
-        "date": contribution_date,
-        "level": int(level)
+        "date": item["date"],
+        "level": item["level"]
     })
 
 data = {
