@@ -21,9 +21,21 @@ soup = BeautifulSoup(response.text, "html.parser")
 
 contributions = []
 
-for rect in soup.select("[data-date]"):
-    contribution_date = rect.get("data-date")
-    level = rect.get("data-level", "0")
+for element in soup.select("[data-date]"):
+    contribution_date = element.get("data-date")
+
+    level = element.get("data-level")
+
+    if level is None:
+        classes = element.get("class", [])
+        level = 0
+
+        for cls in classes:
+            if cls.startswith("ContributionCalendar-day--"):
+                try:
+                    level = int(cls.split("--")[-1])
+                except ValueError:
+                    level = 0
 
     contributions.append({
         "date": contribution_date,
