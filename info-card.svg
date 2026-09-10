@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="280" viewBox="0 0 460 280">
+<rect width="460" height="280" rx="12" fill="#161b22" stroke="#30363d"/>
+<rect width="460" height="42" rx="12" fill="#21262d"/>
+<circle cx="22" cy="21" r="6" fill="#f85149"/><circle cx="42" cy="21" r="6" fill="#d29922"/><circle cx="62" cy="21" r="6" fill="#3fb950"/>
+<text x="88" y="26" fill="#8b949e" font-family="monospace" font-size="14">profile.config</text>
+<g font-family="monospace" font-size="15">
+<text x="28" y="78" fill="#58a6ff">name</text><text x="150" y="78" fill="#c9d1d9">Shubham Gupta</text>
+<text x="28" y="112" fill="#58a6ff">role</text><text x="150" y="112" fill="#c9d1d9">Developer / Builder</text>
+<text x="28" y="146" fill="#58a6ff">focus</text><text x="150" y="146" fill="#c9d1d9">Web + Automation</text>
+<text x="28" y="180" fill="#58a6ff">status</text><text x="150" y="180" fill="#3fb950">learning and shipping</text>
+<text x="28" y="214" fill="#58a6ff">stack</text><text x="150" y="214" fill="#c9d1d9">HTML CSS JS Python</text>
+<text x="28" y="248" fill="#8b949e">last_update: daily</text>
+</g>
+<path d="M28 260 H432" stroke="#30363d"/><circle cx="432" cy="260" r="4" fill="#58a6ff"><animate attributeName="opacity" values="1;0.25;1" dur="1.4s" repeatCount="indefinite"/></circle>
+</svg>  
