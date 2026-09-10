@@ -1,17 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="420" height="280" viewBox="0 0 420 280">
-<rect width="420" height="280" rx="12" fill="#0d1117"/>
-<text x="24" y="34" fill="#58a6ff" font-family="monospace" font-size="16">shubham@github:~$ whoami</text>
-<g fill="#c9d1d9" font-family="monospace" font-size="13">
-<text x="24" y="62">             .-''''-.</text>
-<text x="24" y="78">           .'  .-.   '.</text>
-<text x="24" y="94">          /   (o o)    \</text>
-<text x="24" y="110">         |     \_/      |</text>
-<text x="24" y="126">         |   ._____.    |</text>
-<text x="24" y="142">          \  '-----'   /</text>
-<text x="24" y="158">           '.         .'</text>
-<text x="24" y="174">             '-.__.-'</text>
-<text x="24" y="202" fill="#8b949e">Developer | Builder | Problem Solver</text>
-<text x="24" y="226" fill="#2ea043">[ profile initialized ]</text>
-</g>
-<rect x="24" y="244" width="12" height="16" fill="#58a6ff"><animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></rect>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0d1117"/><stop offset="1" stop-color="#172554"/></linearGradient><linearGradient id="face" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#58a6ff"/><stop offset="1" stop-color="#2ea043"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<rect width="420" height="280" rx="14" fill="url(#bg)" stroke="#30363d"/>
+<g transform="translate(0 0)" opacity=".18"><path d="M40 235 L210 45 L380 235 Z" fill="none" stroke="#58a6ff" stroke-width="2"/><path d="M78 235 L210 88 L342 235" fill="none" stroke="#2ea043"/></g>
+<g transform="translate(34 52)" filter="url(#glow)" font-family="monospace" font-size="14" fill="#c9d1d9">
+<text x="0" y="0" fill="#58a6ff">shubham@github:~$ whoami</text>
+<g transform="translate(0 28)">
+<text x="0" y="18" opacity=".18" transform="translate(10 8)">        .-''''-.</text><text x="0" y="34" opacity=".18" transform="translate(10 8)">      .'  .-.  '.</text><text x="0" y="50" opacity=".18" transform="translate(10 8)">     /   (o o)   \</text><text x="0" y="66" opacity=".18" transform="translate(10 8)">    |     \_/     |</text><text x="0" y="82" opacity=".18" transform="translate(10 8)">    |   ._____.   |</text>
+<g fill="url(#face)"><text x="0" y="18">        .-''''-.</text><text x="0" y="34">      .'  .-.  '.</text><text x="0" y="50">     /   (o o)   \</text><text x="0" y="66">    |     \_/     |</text><text x="0" y="82">    |   ._____.   |</text></g><text x="0" y="98">     \  '-----'  /</text><text x="0" y="114">      '.       .'</text><text x="0" y="130">        '-.__.-'</text></g>
+<text x="0" y="188" fill="#8b949e">Developer | Builder | Problem Solver</text><text x="0" y="212" fill="#2ea043">[ 3D profile initialized ]</text></g>
+<rect x="34" y="246" width="12" height="16" fill="#58a6ff"><animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></rect><path d="M52 254 H385" stroke="#30363d"/><circle cx="385" cy="254" r="4" fill="#69f0a0"><animate attributeName="r" values="3;6;3" dur="1.8s" repeatCount="indefinite"/></circle>
 </svg>  
